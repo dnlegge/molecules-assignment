@@ -24,7 +24,7 @@ public class Solution {
                 //prop seemed to need to be a double rather than int
                 double prop = Calculate.get_Prop(ch).main(mol);
 
-                cal.output.display(prop);
+                cal.getOutput().display(prop);
             }
         } catch (IOException | InvalidSmilesException e) {
             System.out.print(e);

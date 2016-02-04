@@ -5,15 +5,15 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Calculate {
-    BufferedReader bufferedReader;
-    int lineCount = 0;
-    Result output;
+    private BufferedReader bufferedReader;
+    private int lineCount = 0;
+    private CalculatedOutput output;
 
 
     public Calculate() throws IOException {
         final String pathToDir = "./src/main/resources/";
         bufferedReader = new BufferedReader(new FileReader(pathToDir + "sampleInput.txt"));
-        output = new Result(pathToDir);
+        output = new CalculatedOutput(pathToDir);
     }
 
     public static Calculation get_Prop(int ch) {
@@ -29,25 +29,32 @@ public class Calculate {
         return null;
     }
 
-    public int getINTVal() {
+    public int getINTVal() throws IOException {
         lineCount++;
+        String line = null;
         try {
-            return Integer.parseInt(bufferedReader.readLine());
-        } catch (IOException e) {
+            line = bufferedReader.readLine();
+            return Integer.parseInt(line);
+        } catch (NumberFormatException | IOException e) {
             System.out.println("Error parsing an expected integer at line " + lineCount);
-            throw new RuntimeException(e);
+            if (line != null) {
+                System.out.println("Expecting integer found " + line);
+            }
+            throw e;
         }
     }
 
-    public String getStringVal() {
+    public String getStringVal() throws IOException {
         lineCount++;
         try {
             return bufferedReader.readLine();
         } catch (IOException e) {
             System.out.println("Error reading line " + lineCount);
-            throw new RuntimeException(e);
+            throw e;
         }
     }
 
-
+    public CalculatedOutput getOutput() {
+        return output;
+    }
 }

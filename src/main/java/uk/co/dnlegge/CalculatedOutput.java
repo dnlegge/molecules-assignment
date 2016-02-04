@@ -6,10 +6,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-public class Result {
+public class CalculatedOutput {
     private BufferedWriter bufferedWriter;
 
-    public Result(String pathToDir) throws IOException {
+    public CalculatedOutput(String pathToDir) throws IOException {
         bufferedWriter = new BufferedWriter(new FileWriter(pathToDir + "/sampleOutput.txt"));
     }
 

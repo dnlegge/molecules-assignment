@@ -16,8 +16,8 @@ public class SolutionTest {
         String[] args = new String[]{};
         Solution.main(args);
 
-        final String pathToTestDir = ".//src/test/resources/";
-        final String pathToActualDir = ".//src/main/resources/";
+        final String pathToTestDir = "./src/test/resources/";
+        final String pathToActualDir = "./src/main/resources/";
 
         try (BufferedReader expectedOutputReader = new BufferedReader(new FileReader(pathToTestDir + "expectedOutput.txt"))) {
             try (BufferedReader actualOutputReader = new BufferedReader(new FileReader(pathToActualDir + "sampleOutput.txt"))) {
