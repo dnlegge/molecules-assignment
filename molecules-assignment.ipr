@@ -18,7 +18,24 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for molecule-assignment" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for molecules-assignment" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="molecules-assignment" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="molecule-assignment" target="1.8" />
+      <module name="molecules-assignment" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
   <component name="Encoding">
@@ -26,6 +43,13 @@
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
   </component>
   <component name="Palette2">
     <group name="Swing">
@@ -170,9 +194,1039 @@
     <mapping directory="" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="Maven: com.github.gilleain.signatures:signatures:1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/gilleain/signatures/signatures/1.1/signatures-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/gilleain/signatures/signatures/1.1/signatures-1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/github/gilleain/signatures/signatures/1.1/signatures-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.guava:guava:17.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-io:commons-io:2.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.0.1/commons-io-2.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.0.1/commons-io-2.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: gov.nist.math:jama:1.0.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/gov/nist/math/jama/1.0.3/jama-1.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/gov/nist/math/jama/1.0.3/jama-1.0.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/gov/nist/math/jama/1.0.3/jama-1.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.vecmath:vecmath:1.5.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: jgrapht:jgrapht:0.6.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/jgrapht/jgrapht/0.6.0/jgrapht-0.6.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/jgrapht/jgrapht/0.6.0/jgrapht-0.6.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/jgrapht/jgrapht/0.6.0/jgrapht-0.6.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: joda-time:joda-time:1.6.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/1.6.2/joda-time-1.6.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/1.6.2/joda-time-1.6.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/1.6.2/joda-time-1.6.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: junit:junit:4.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: log4j:log4j:1.2.17">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.sf.jnati:jnati-core:0.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-core/0.4/jnati-core-0.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-core/0.4/jnati-core-0.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-core/0.4/jnati-core-0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.sf.jnati:jnati-deploy:0.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-deploy/0.4/jnati-deploy-0.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-deploy/0.4/jnati-deploy-0.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jnati/jnati-deploy/0.4/jnati-deploy-0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: net.sf.jni-inchi:jni-inchi:0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jni-inchi/jni-inchi/0.8/jni-inchi-0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jni-inchi/jni-inchi/0.8/jni-inchi-0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/net/sf/jni-inchi/jni-inchi/0.8/jni-inchi-0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-math3:3.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-math:2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math/2.2/commons-math-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math/2.2/commons-math-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-math/2.2/commons-math-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.jena:jena-core:2.7.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-core/2.7.4/jena-core-2.7.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-core/2.7.4/jena-core-2.7.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-core/2.7.4/jena-core-2.7.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.jena:jena-iri:0.9.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-iri/0.9.4/jena-iri-0.9.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-iri/0.9.4/jena-iri-0.9.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/jena/jena-iri/0.9.4/jena-iri-0.9.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ccil.cowan.tagsoup:tagsoup:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ccil/cowan/tagsoup/tagsoup/1.2/tagsoup-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-annotation:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-annotation/1.5.12/cdk-annotation-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-annotation/1.5.12/cdk-annotation-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-annotation/1.5.12/cdk-annotation-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-atomtype:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-atomtype/1.5.12/cdk-atomtype-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-atomtype/1.5.12/cdk-atomtype-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-atomtype/1.5.12/cdk-atomtype-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-builder3d:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3d/1.5.12/cdk-builder3d-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3d/1.5.12/cdk-builder3d-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3d/1.5.12/cdk-builder3d-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-builder3dtools:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3dtools/1.5.12/cdk-builder3dtools-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3dtools/1.5.12/cdk-builder3dtools-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-builder3dtools/1.5.12/cdk-builder3dtools-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-bundle:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-bundle/1.5.12/cdk-bundle-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-bundle/1.5.12/cdk-bundle-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-bundle/1.5.12/cdk-bundle-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-charges:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-charges/1.5.12/cdk-charges-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-charges/1.5.12/cdk-charges-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-charges/1.5.12/cdk-charges-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-cip:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-cip/1.5.12/cdk-cip-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-cip/1.5.12/cdk-cip-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-cip/1.5.12/cdk-cip-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-control:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-control/1.5.12/cdk-control-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-control/1.5.12/cdk-control-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-control/1.5.12/cdk-control-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-core:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-core/1.5.12/cdk-core-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-core/1.5.12/cdk-core-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-core/1.5.12/cdk-core-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-data:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-data/1.5.12/cdk-data-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-data/1.5.12/cdk-data-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-data/1.5.12/cdk-data-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-datadebug:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-datadebug/1.5.12/cdk-datadebug-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-datadebug/1.5.12/cdk-datadebug-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-datadebug/1.5.12/cdk-datadebug-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-dict:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-dict/1.5.12/cdk-dict-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-dict/1.5.12/cdk-dict-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-dict/1.5.12/cdk-dict-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-diff:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-diff/1.5.12/cdk-diff-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-diff/1.5.12/cdk-diff-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-diff/1.5.12/cdk-diff-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-extra:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-extra/1.5.12/cdk-extra-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-extra/1.5.12/cdk-extra-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-extra/1.5.12/cdk-extra-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-fingerprint:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fingerprint/1.5.12/cdk-fingerprint-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fingerprint/1.5.12/cdk-fingerprint-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fingerprint/1.5.12/cdk-fingerprint-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-forcefield:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-forcefield/1.5.12/cdk-forcefield-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-forcefield/1.5.12/cdk-forcefield-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-forcefield/1.5.12/cdk-forcefield-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-formula:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-formula/1.5.12/cdk-formula-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-formula/1.5.12/cdk-formula-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-formula/1.5.12/cdk-formula-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-fragment:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fragment/1.5.12/cdk-fragment-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fragment/1.5.12/cdk-fragment-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-fragment/1.5.12/cdk-fragment-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-group:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-group/1.5.12/cdk-group-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-group/1.5.12/cdk-group-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-group/1.5.12/cdk-group-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-hash:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-hash/1.5.12/cdk-hash-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-hash/1.5.12/cdk-hash-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-hash/1.5.12/cdk-hash-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-inchi:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-inchi/1.5.12/cdk-inchi-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-inchi/1.5.12/cdk-inchi-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-inchi/1.5.12/cdk-inchi-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-interfaces:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-interfaces/1.5.12/cdk-interfaces-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-interfaces/1.5.12/cdk-interfaces-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-interfaces/1.5.12/cdk-interfaces-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-io:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-io/1.5.12/cdk-io-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-io/1.5.12/cdk-io-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-io/1.5.12/cdk-io-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-ioformats:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ioformats/1.5.12/cdk-ioformats-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ioformats/1.5.12/cdk-ioformats-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ioformats/1.5.12/cdk-ioformats-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-ionpot:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ionpot/1.5.12/cdk-ionpot-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ionpot/1.5.12/cdk-ionpot-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-ionpot/1.5.12/cdk-ionpot-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-iordf:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-iordf/1.5.12/cdk-iordf-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-iordf/1.5.12/cdk-iordf-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-iordf/1.5.12/cdk-iordf-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-isomorphism:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-isomorphism/1.5.12/cdk-isomorphism-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-isomorphism/1.5.12/cdk-isomorphism-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-isomorphism/1.5.12/cdk-isomorphism-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-legacy:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-legacy/1.5.12/cdk-legacy-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-legacy/1.5.12/cdk-legacy-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-legacy/1.5.12/cdk-legacy-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-libiocml:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiocml/1.5.12/cdk-libiocml-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiocml/1.5.12/cdk-libiocml-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiocml/1.5.12/cdk-libiocml-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-libiomd:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiomd/1.5.12/cdk-libiomd-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiomd/1.5.12/cdk-libiomd-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-libiomd/1.5.12/cdk-libiomd-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-log4j:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-log4j/1.5.12/cdk-log4j-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-log4j/1.5.12/cdk-log4j-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-log4j/1.5.12/cdk-log4j-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-model:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-model/1.5.12/cdk-model-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-model/1.5.12/cdk-model-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-model/1.5.12/cdk-model-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-pcore:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pcore/1.5.12/cdk-pcore-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pcore/1.5.12/cdk-pcore-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pcore/1.5.12/cdk-pcore-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-pdb:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdb/1.5.12/cdk-pdb-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdb/1.5.12/cdk-pdb-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdb/1.5.12/cdk-pdb-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-pdbcml:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdbcml/1.5.12/cdk-pdbcml-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdbcml/1.5.12/cdk-pdbcml-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-pdbcml/1.5.12/cdk-pdbcml-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qm:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qm/1.5.12/cdk-qm-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qm/1.5.12/cdk-qm-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qm/1.5.12/cdk-qm-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsar:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsar/1.5.12/cdk-qsar-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsar/1.5.12/cdk-qsar-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsar/1.5.12/cdk-qsar-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsaratomic:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsaratomic/1.5.12/cdk-qsaratomic-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsaratomic/1.5.12/cdk-qsaratomic-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsaratomic/1.5.12/cdk-qsaratomic-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsarbond:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarbond/1.5.12/cdk-qsarbond-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarbond/1.5.12/cdk-qsarbond-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarbond/1.5.12/cdk-qsarbond-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsarcml:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarcml/1.5.12/cdk-qsarcml-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarcml/1.5.12/cdk-qsarcml-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarcml/1.5.12/cdk-qsarcml-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsarionpot:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarionpot/1.5.12/cdk-qsarionpot-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarionpot/1.5.12/cdk-qsarionpot-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarionpot/1.5.12/cdk-qsarionpot-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsarmolecular:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarmolecular/1.5.12/cdk-qsarmolecular-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarmolecular/1.5.12/cdk-qsarmolecular-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarmolecular/1.5.12/cdk-qsarmolecular-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-qsarprotein:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarprotein/1.5.12/cdk-qsarprotein-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarprotein/1.5.12/cdk-qsarprotein-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-qsarprotein/1.5.12/cdk-qsarprotein-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-reaction:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-reaction/1.5.12/cdk-reaction-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-reaction/1.5.12/cdk-reaction-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-reaction/1.5.12/cdk-reaction-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-render:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-render/1.5.12/cdk-render-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-render/1.5.12/cdk-render-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-render/1.5.12/cdk-render-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-renderawt:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderawt/1.5.12/cdk-renderawt-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderawt/1.5.12/cdk-renderawt-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderawt/1.5.12/cdk-renderawt-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-renderbasic:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderbasic/1.5.12/cdk-renderbasic-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderbasic/1.5.12/cdk-renderbasic-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderbasic/1.5.12/cdk-renderbasic-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-renderextra:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderextra/1.5.12/cdk-renderextra-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderextra/1.5.12/cdk-renderextra-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-renderextra/1.5.12/cdk-renderextra-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-sdg:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-sdg/1.5.12/cdk-sdg-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-sdg/1.5.12/cdk-sdg-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-sdg/1.5.12/cdk-sdg-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-signature:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-signature/1.5.12/cdk-signature-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-signature/1.5.12/cdk-signature-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-signature/1.5.12/cdk-signature-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-silent:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-silent/1.5.12/cdk-silent-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-silent/1.5.12/cdk-silent-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-silent/1.5.12/cdk-silent-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-smarts:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smarts/1.5.12/cdk-smarts-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smarts/1.5.12/cdk-smarts-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smarts/1.5.12/cdk-smarts-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-smiles:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smiles/1.5.12/cdk-smiles-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smiles/1.5.12/cdk-smiles-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smiles/1.5.12/cdk-smiles-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-smsd:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smsd/1.5.12/cdk-smsd-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smsd/1.5.12/cdk-smsd-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-smsd/1.5.12/cdk-smsd-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-standard:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-standard/1.5.12/cdk-standard-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-standard/1.5.12/cdk-standard-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-standard/1.5.12/cdk-standard-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-structgen:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-structgen/1.5.12/cdk-structgen-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-structgen/1.5.12/cdk-structgen-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-structgen/1.5.12/cdk-structgen-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-tautomer:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-tautomer/1.5.12/cdk-tautomer-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-tautomer/1.5.12/cdk-tautomer-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-tautomer/1.5.12/cdk-tautomer-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.openscience.cdk:cdk-valencycheck:1.5.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-valencycheck/1.5.12/cdk-valencycheck-1.5.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-valencycheck/1.5.12/cdk-valencycheck-1.5.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/openscience/cdk/cdk-valencycheck/1.5.12/cdk-valencycheck-1.5.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.slf4j:slf4j-api:1.6.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.xml-cml:cmlxom:3.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/cmlxom/3.1/cmlxom-3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/cmlxom/3.1/cmlxom-3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/cmlxom/3.1/cmlxom-3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.xml-cml:euclid:1.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/euclid/1.0.1/euclid-1.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/euclid/1.0.1/euclid-1.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/xml-cml/euclid/1.0.1/euclid-1.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: uk.ac.ebi.beam:beam-core:0.9.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-core/0.9.1/beam-core-0.9.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-core/0.9.1/beam-core-0.9.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-core/0.9.1/beam-core-0.9.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: uk.ac.ebi.beam:beam-func:0.9.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-func/0.9.1/beam-func-0.9.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-func/0.9.1/beam-func-0.9.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/uk/ac/ebi/beam/beam-func/0.9.1/beam-func-0.9.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: xalan:xalan:2.7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/xalan/xalan/2.7.0/xalan-2.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/xalan/xalan/2.7.0/xalan-2.7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/xalan/xalan/2.7.0/xalan-2.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: xerces:xercesImpl:2.8.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.8.0/xercesImpl-2.8.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: xml-apis:xml-apis:1.3.03">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.3.03/xml-apis-1.3.03-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: xom:xom:1.2.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/xom/xom/1.2.5/xom-1.2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/xom/xom/1.2.5/xom-1.2.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/xom/xom/1.2.5/xom-1.2.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: xpp3:xpp3:1.1.4c">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/xpp3/xpp3/1.1.4c/xpp3-1.1.4c-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/xpp3/xpp3/1.1.4c/xpp3-1.1.4c-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="org.openscience.cdk:cdk-bundle:1.5.12" type="repository">
       <properties maven-id="org.openscience.cdk:cdk-bundle:1.5.12" />
       <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/cdk-bundle-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-interfaces-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/vecmath-1.5.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-annotation-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-core-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/guava-17.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-standard-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-atomtype-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-valencycheck-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-diff-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-data-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-ioformats-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-silent-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-isomorphism-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-datadebug-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-io-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xpp3-1.1.4c.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-formula-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-dict-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xom-1.2.5.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xml-apis-1.3.03.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xercesImpl-2.8.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/xalan-2.7.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-pdb-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-libiocml-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cmlxom-3.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/euclid-1.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-io-2.0.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-math-2.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/joda-time-1.6.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/tagsoup-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-smiles-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/beam-core-0.9.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/beam-func-0.9.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-extra-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jama-1.0.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-log4j-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-smarts-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-reaction-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-fingerprint-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/commons-math3-3.1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-cip-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-signature-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/signatures-1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-charges-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-forcefield-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-sdg-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-builder3dtools-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-builder3d-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsar-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-ionpot-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsaratomic-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsarbond-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-hash-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-fragment-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-model-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsarmolecular-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsarcml-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsarionpot-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qsarprotein-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-render-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-renderbasic-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-renderawt-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-renderextra-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-control-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-qm-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-iordf-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jena-core-2.7.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jena-iri-0.9.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-libiomd-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-pdbcml-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-inchi-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jni-inchi-0.8.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jnati-deploy-0.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jnati-core-0.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-group-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-pcore-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-smsd-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-structgen-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-tautomer-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/cdk-legacy-1.5.12.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jgrapht-0.6.0.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/cdk-bundle-1.5.12.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/cdk-interfaces-1.5.12.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/vecmath-1.5.2.jar!/" />
