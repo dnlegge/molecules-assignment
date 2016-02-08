@@ -26,7 +26,7 @@ public class Calculate {
         } else if (ch == 4) {
             return new MolecularWeightCalculation();
         }
-        return null;
+        throw new IllegalArgumentException("Number must be between 1 and 4, but was " + ch);
     }
 
     public int getINTVal() throws IOException {
